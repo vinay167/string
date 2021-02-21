@@ -1,0 +1,54 @@
+#include <stdio.h>
+#include<string.h>
+
+int main()
+{
+    char str[1000];
+    int choice,len,i,j;
+    printf("Enter string:");
+    scanf("%[^\n]",str);
+    len=strlen(str);
+    
+    printf("Length of the string is %d",len);
+    printf("\n1.Convert the string to lowercase");
+    printf("\n2.Reverse the string");
+    printf("\n3.Delete alternate characters");
+    printf("\n4.Sum of numbers in string");
+    printf("\n5.Remove spaces");
+    printf("\nEnter your choice:");
+    scanf("%d",&choice);
+    switch(choice)
+    {
+        case 1:
+        printf("Convert the string to lowercase");
+        
+        break;
+        case 2:
+        printf("\nReverse the string is\n");
+        printf("%s",str);
+        break;
+        case 3:
+        printf("\n3.Delete alternate characters");
+        
+        break;
+        case 4:
+        printf("\n4.Sum of numbers in string");
+        
+        break;
+        case 5:
+        printf("\n5.Remove spaces");
+        for(i=0;i<len;i++)
+         {
+             if(str[i]==' ')
+              {
+                  for(j=i;j<len;j++)
+                  {
+                    str[j]=str[j+1];
+                  }
+              }
+         }
+        printf("The string: %s\n", str);
+        break;
+    }
+    return 0;
+}

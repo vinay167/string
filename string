@@ -8,8 +8,9 @@ int main()
     printf("Enter string:");
     scanf("%[^\n]",str);
     len=strlen(str);
-    
     printf("Length of the string is %d",len);
+    while(1)
+    {
     printf("\n1.Convert the string to lowercase");
     printf("\n2.Reverse the string");
     printf("\n3.Delete alternate characters");
@@ -21,15 +22,30 @@ int main()
     {
         case 1:
         printf("Convert the string to lowercase");
-        
+        for(i=0;i<len;i++)
+        {
+         if(str[i]>='a' && str[i]<='z');
+            str[i]=str[i]-32;
+        }
+        printf("%s",str);
         break;
         case 2:
         printf("\nReverse the string is\n");
-        printf("%s",str);
+        for(i=len-1;i>=0;i--)
+        {
+            printf("%c",str[i]);
+        }
         break;
         case 3:
         printf("\n3.Delete alternate characters");
-        
+        for(i=0;i<len;i++)
+        {
+         if(i%2!=0)
+         {
+             str[i]==" ";
+         }
+        }
+        printf("The string is: %s", str);
         break;
         case 4:
         printf("\n4.Sum of numbers in string");
@@ -49,6 +65,7 @@ int main()
          }
         printf("The string: %s\n", str);
         break;
+    }
     }
     return 0;
 }

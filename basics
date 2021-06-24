@@ -1,0 +1,31 @@
+#include<iostream>
+using namespace std;
+int main()
+{
+    int operation;
+    string str;
+    getline(cin,str);
+    cout<<"The initial string is";
+    cout<<str<<endl;
+    cout<<"Enter the number of operation you want to perform";
+    cout<<"\n1.Add an element in string";
+    cout<<"\n2.Delete an element from string";
+    cout<<"\n3.Legth of string\n";
+    cin>>operation;
+    switch(operation)
+    {
+    case 1:
+    str.push_back('s');
+    cout<<str<<endl;
+    break;
+    
+    case 2:
+    str.pop_back();
+    cout<<str<<endl;
+    break;
+    case 3:
+    cout<<str.length()<<endl;
+    break;
+    }
+    return 0;
+}

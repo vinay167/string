@@ -1,57 +1,64 @@
-#include <stdio.h>
-#include<string.h>
-
+#include<iostream>
+#include<string>
+#include <algorithm>
+using namespace std;
 int main()
 {
-    char str[1000];
-    int choice,len,i,j;
-    printf("Enter string:");
-    scanf("%[^\n]",str);
-    len=strlen(str);
-    printf("Length of the string is %d",len);
-    while(1)
-    {
-    printf("\n1.Convert the string to lowercase");
-    printf("\n2.Reverse the string");
-    printf("\n3.Delete alternate characters");
-    printf("\n4.Sum of numbers in string");
-    printf("\n5.Remove spaces");
-    printf("\nEnter your choice:");
-    scanf("%d",&choice);
+    int length,i,choice;
+    int count=0;
+    string s;
+    cout<<"Enter Your string:";
+    getline(cin,s);
+    length=s.length();
+    cout<<"1-Convert string in lowercase\n2-Reverse the string\n3-Delete alternate character"<<endl;
+    cout<<"4-Count of camel case character\n5-Remove spaces"<<endl;
+    cout<<"Enter your choice:";
+    cin>>choice;
     switch(choice)
+{
+    case 1:
+    for(i=0;i<length;i++)
     {
-        case 1:
-        printf("Convert the string to lowercase");
-        for(i=0;i<len;i++)
+        if(s[i] >= 'a' && s[i] <= 'z')
         {
-         if(str[i]>='a' && str[i]<='z');
-            str[i]=str[i]-32;
+            s[i] = s[i] - 32;
         }
-        printf("%s",str);
-        break;
-        case 2:
-        printf("\nReverse the string is\n");
-        for(i=len-1;i>=0;i--)
+    }
+    cout<<s<<endl;
+    break;
+    
+    case 2:
+    for(i=length;i>=0;i--)
+    {
+        cout<<s[i];
+    }
+    break;
+    case 3:
+    for(i=0;i<length;i++)
+    {
+        if(i%2 == 0)
         {
-            printf("%c",str[i]);
+            cout<<s[i];
         }
-        break;
-        case 3:
-        printf("\n3.Delete alternate characters");
-        for(i=0;i<len;i++)
+    }
+    break;
+    case 4:
+    for(i=0;i<length;i++)
+    {
+        if(s[i] >= 'A' && s[i] <= 'Z')
         {
-         if(i%2!=0)
-         {
-             str[i]==" ";
-         }
+            count = count + 1;
         }
-        printf("The string is: %s", str);
-        break;
-        case 4:
-        printf("\n4.Sum of numbers in string");
-        
-        break;
-        case 5:
+    }
+    cout<<count;
+    break;
+    case 5:
+    s.erase(remove(s.begin(), s.end(), ' '), s.end());
+    cout<<s;
+    break;
+}
+}
+      //  case 5:
         printf("\n5.Remove spaces");
         for(i=0;i<len;i++)
          {
@@ -69,3 +76,4 @@ int main()
     }
     return 0;
 }
+//

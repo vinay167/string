@@ -54,6 +54,102 @@ int main()
         {
             cout<<"c";
         }
+        else if(n==4)
+        {
+            cout<<"d";
+        }
+        else if(n==5)
+        {
+            cout<<"e";
+        }
+        else if(n==6)
+        {
+            cout<<"f";
+        }
+        else if(n==7)
+        {
+            cout<<"g";
+        }
+        else if(n==8)
+        {
+            cout<<"h";
+        }
+        else if(n==9)
+        {
+            cout<<"i";
+        }
+        else if(n==10)
+        {
+            cout<<"j";
+        }
+        else if(n==11)
+        {
+            cout<<"k";
+        }
+        else if(n==12)
+        {
+            cout<<"l";
+        }
+        else if(n==13)
+        {
+            cout<<"m";
+        }
+        else if(n==14)
+        {
+            cout<<"n";
+        }
+        else if(n==15)
+        {
+            cout<<"o";
+        }
+        else if(n==16)
+        {
+            cout<<"p";
+        }
+        else if(n==17)
+        {
+            cout<<"q";
+        }
+        else if(n==18)
+        {
+            cout<<"r";
+        }
+        else if(n==19)
+        {
+            cout<<"s";
+        }
+        else if(n==20)
+        {
+            cout<<"t";
+        }
+        else if(n==21)
+        {
+            cout<<"u";
+        }
+        else if(n==22)
+        {
+            cout<<"v";
+        }
+        else if(n==23)
+        {
+            cout<<"w";
+        }
+        else if(n==24)
+        {
+            cout<<"x";
+        }
+        else if(n==25)
+        {
+            cout<<"y";
+        }
+        else if(n==26)
+        {
+            cout<<"z";
+        }
+        else
+        {
+            cout<<"?";
+        }
         //cout<<n<<",";
     }
 }

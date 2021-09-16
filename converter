@@ -42,6 +42,18 @@ int main()
         n=m-96;
         n=n-x;
         //o=char(n);
-        cout<<n<<",";
+        if(n==1)
+        {
+            cout<<"a";
+        }
+        else if(n==2)
+        {
+            cout<<"b";
+        }
+        else if(n==3)
+        {
+            cout<<"c";
+        }
+        //cout<<n<<",";
     }
 }

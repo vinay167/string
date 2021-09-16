@@ -2,9 +2,9 @@
 using namespace std;
 int main()
 {
-    int length,p,l,length1;
-    int v=0,k=0;
-    string s1,s2;
+    int length,p,l,length1,length2,h,m;
+    int v=0,k=0,g=0,n=0,x=0;
+    string s1,s2,s3;
     cout<<"Enter the first string: ";
     cin>>s1;
     cout<<"Enter the second string: ";
@@ -23,5 +23,23 @@ int main()
         l=(int)s2[i];
         k=l-96;
         cout<<k<<",";
+    }
+    cout<<"\nDifferences"<<endl;
+    for(int i=0;i<length1;i++)
+    {
+        g=(int)s1[i]-(int)s2[i];
+        //h=g-96;
+        cout<<g<<",";
+    }
+    cout<<"\nEnter the third string"<<endl;
+    cin>>s3;
+    length2=s3.length();
+    for(int i=0;i<length2;i++)
+    {
+        m=(int)s3[i];
+        x=(int)s1[i]-(int)s2[i];
+        n=m-96;
+        n=n-x;
+        cout<<s3[n]<<",";
     }
 }

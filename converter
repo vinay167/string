@@ -4,6 +4,7 @@ int main()
 {
     int length,p,l,length1,length2,h,m;
     int v=0,k=0,g=0,n=0,x=0;
+    char o;
     string s1,s2,s3;
     cout<<"Enter the first string: ";
     cin>>s1;
@@ -40,6 +41,7 @@ int main()
         x=(int)s1[i]-(int)s2[i];
         n=m-96;
         n=n-x;
-        cout<<s3[n]<<",";
+        //o=char(n);
+        cout<<n<<",";
     }
 }
